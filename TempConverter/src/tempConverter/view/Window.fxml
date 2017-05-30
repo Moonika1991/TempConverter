@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tempConverter.view.Window">
+   <children>
+      <Label layoutX="179.0" layoutY="29.0" text="Input" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="30.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="111.0" text="Input scale" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="100.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="447.0" layoutY="111.0" text="Output scale" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="100.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="200.0" layoutY="28.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="30.0" />
+      <CheckBox layoutX="44.0" layoutY="129.0" mnemonicParsing="false" text="Celsius" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="130.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </CheckBox>
+      <CheckBox layoutX="44.0" layoutY="166.0" mnemonicParsing="false" text="Farenheit" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="160.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </CheckBox>
+      <CheckBox layoutX="44.0" layoutY="200.0" mnemonicParsing="false" text="Kelvin" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="190.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </CheckBox>
+      <CheckBox layoutX="400.0" layoutY="129.0" mnemonicParsing="false" text="Celsius" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="130.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </CheckBox>
+      <CheckBox layoutX="400.0" layoutY="158.0" mnemonicParsing="false" text="Farenheit" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="160.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </CheckBox>
+      <CheckBox layoutX="400.0" layoutY="192.0" mnemonicParsing="false" text="Kelvin" AnchorPane.leftAnchor="400.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="190.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </CheckBox>
+      <Label layoutX="225.0" layoutY="302.0" text="Output" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="180.0" AnchorPane.rightAnchor="350.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField layoutX="260.0" layoutY="348.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="200.0" />
+   </children>
+</AnchorPane>
