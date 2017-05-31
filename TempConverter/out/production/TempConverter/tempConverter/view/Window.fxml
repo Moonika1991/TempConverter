@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tempConverter.WindowController">
    <top>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -20,7 +20,7 @@
                </font>
             </Label>
             <Separator prefWidth="20.0" visible="false" />
-            <TextField />
+            <TextField fx:id="input" />
          </children>
       </HBox>
    </top>
@@ -35,23 +35,26 @@
                      </font>
                   </Label>
                   <Separator orientation="VERTICAL" prefHeight="10.0" visible="false" />
-                  <CheckBox mnemonicParsing="false" text="Celsius">
+                  <RadioButton fx:id="celsiusIn1" mnemonicParsing="false" onAction="#handleButtonAction" selected="true" text="Celsius">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
-                  </CheckBox>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="inputScale" />
+                     </toggleGroup>
+                  </RadioButton>
                   <Separator orientation="VERTICAL" prefHeight="10.0" visible="false" />
-                  <CheckBox mnemonicParsing="false" text="Fahrenheit">
+                  <RadioButton fx:id="fahrenheitIn1" mnemonicParsing="false" onAction="#handleButtonAction" text="Fahrenheit" toggleGroup="$inputScale">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
-                  </CheckBox>
+                  </RadioButton>
                   <Separator orientation="VERTICAL" prefHeight="10.0" visible="false" />
-                  <CheckBox mnemonicParsing="false" text="Kelvin">
+                  <RadioButton fx:id="kelvinIn1" mnemonicParsing="false" onAction="#handleButtonAction" text="Kelvin" toggleGroup="$inputScale">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
-                  </CheckBox>
+                  </RadioButton>
                </children>
             </VBox>
             <Separator prefWidth="150.0" visible="false" />
@@ -63,23 +66,26 @@
                      </font>
                   </Label>
                   <Separator orientation="VERTICAL" prefHeight="10.0" visible="false" />
-                  <CheckBox mnemonicParsing="false" text="Celsius">
+                  <RadioButton fx:id="celsiusIn2" mnemonicParsing="false" onAction="#handleButtonAction" selected="true" text="Celsius">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
-                  </CheckBox>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="outputScale" />
+                     </toggleGroup>
+                  </RadioButton>
                   <Separator orientation="VERTICAL" prefHeight="10.0" visible="false" />
-                  <CheckBox mnemonicParsing="false" text="Fahrenheit">
+                  <RadioButton fx:id="fahrenheitIn2" mnemonicParsing="false" onAction="#handleButtonAction" text="Fahrenheit" toggleGroup="$outputScale">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
-                  </CheckBox>
+                  </RadioButton>
                   <Separator orientation="VERTICAL" prefHeight="10.0" visible="false" />
-                  <CheckBox mnemonicParsing="false" text="Kelvin">
+                  <RadioButton fx:id="kelvinIn2" mnemonicParsing="false" onAction="#handleButtonAction" text="Kelvin" toggleGroup="$outputScale">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
-                  </CheckBox>
+                  </RadioButton>
                </children>
             </VBox>
          </children>
@@ -94,7 +100,7 @@
                </font>
             </Label>
             <Separator prefWidth="20.0" visible="false" />
-            <TextField editable="false" />
+            <TextField fx:id="output" editable="false" />
          </children>
       </HBox>
    </bottom>
