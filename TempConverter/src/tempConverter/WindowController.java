@@ -1,5 +1,6 @@
 package tempConverter;
 
+import javafx.beans.binding.Bindings;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -75,7 +76,7 @@ public class WindowController{
     private void CelsiusToFahrenheit (TextField input){
         if(isInputValid()){
             result = (9./5) * Double.parseDouble(input.getText()) + 32 ;
-            output.setText(Double.toString(result) + " °F");
+            output.setText(String.format("%.2f",result) + " °F");
         }
 
     }
@@ -83,7 +84,7 @@ public class WindowController{
     private void CelsiusToKelvin (TextField input){
         if(isInputValid()){
             result = Double.parseDouble(input.getText()) + 273.15 ;
-            output.setText(Double.toString(result) + " °K");
+            output.setText(String.format("%.2f",result) + " °K");
         }
 
     }
@@ -96,14 +97,14 @@ public class WindowController{
     private void FahrenheitToCelsius (TextField input){
         if(isInputValid()) {
             result = 5./9 * (Double.parseDouble(input.getText()) - 32);
-            output.setText(Double.toString(result) + " °C");
+            output.setText(String.format("%.2f",result) + " °C");
         }
     }
 
     private void FahrenheitToKelvin(TextField input){
         if(isInputValid()) {
             result = (Double.parseDouble(input.getText()) + 459.67) * 5./9;
-            output.setText(Double.toString(result) + " °K");
+            output.setText(String.format("%.2f",result) + " °K");
         }
     }
 
@@ -115,14 +116,14 @@ public class WindowController{
     private void KelvinToCelsius (TextField input){
         if(isInputValid()) {
             result = Double.parseDouble(input.getText()) - 273.15;
-            output.setText(Double.toString(result) + " °C");
+            output.setText(String.format("%.2f",result) + " °C");
         }
     }
 
     private void KelvinToFahrenheit (TextField input){
         if(isInputValid()) {
-            result = Double.parseDouble(input.getText()) * 1.8 - 459.67;
-            output.setText(Double.toString(result) + " °F");
+            result = Double.parseDouble(input.getText()) * 1.8 - 459.67 ;
+            output.setText(String.format("%.2f",result) + " °F");
         }
     }
 
